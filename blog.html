@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Блог</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+        </div>
+        <div class="header-nav">
+            <div class="burger-menu">
+                <div class="menu-button" id="js-menu-button"><span></span></div>
+            </div>
+            <ul>
+                <li><a href="#">Меблі для ванної кімнати</a></li>
+                <li><a href="#">Меблі для дому</a>
+                    <ul class="submenu">
+                        <li class="active"><a href="#">Вітальні</a></li>
+                        <li><a href="#">Спальні</a></li>
+                        <li><a href="#">Дитячі</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Змішувачі та аксесуари</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Покупцям</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Де купити?</a></li>
+                <li><a href="#">Кар’єра</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <div class="header__search">
+                <span><img src="images/icons/search.svg" alt="search"></span>
+                <div class="header__search-field">
+                    <form action="">
+                        <input type="text" placeholder="Пошук">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+            </div>
+            <div class="header__card">
+                <a href="#"><img src="images/icons/shopping-basket.svg" alt="basket"></a>
+            </div>
+            <div class="header__language">
+                <p>Ua<img src="images/icons/arrow-down.svg" alt="arrow"></p>
+                <ul>
+                    <li><a href="#">Ua</a></li>
+                    <li><a href="#">Ru</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="bread-crums">
+                <ul>
+                    <li><a href="#">Головна</a></li>
+                    <li>Про нас</li>
+                </ul>
+            </div>
+            <div class="blog">
+                <h1 class="genh1">Блог</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="blog__bigpost">
+                                <img src="images/postpic1.png" alt="image">
+                                <div class="blog__bigpost-text">
+                                    <p class="date"><img src="images/icons/calendar.svg" alt="icon"> 22.07.2019</p>
+                                    <p class="descr">Lorem ipsum dolor sit amet, ac dictumst dis est hac...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="blog__bigpost">
+                                <img src="images/postpic2.png" alt="image">
+                                <div class="blog__bigpost-text">
+                                    <p class="date"><img src="images/icons/calendar.svg" alt="icon"> 22.07.2019</p>
+                                    <p class="descr">Lorem ipsum dolor sit amet, ac dictumst dis est hac...</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog__row-posts">
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic1.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Et volutpat vel ligula </p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Eu at ac mauris felis non hendrerit, scelerisque viverra id faucibus dolor,
+                                            sodales augue vestibulum massa ligula aliquet odio, nam sed leo donec at.
+                                            Curabitur euismod in ullamcorper, netus luctus nonummy fringilla ut integer
+                                            eget...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic2.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Et volutpat vel ligula </p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Sit sem eu pellentesque quis id suscipit, vel cras, arcu vestibulum id, ac
+                                            pellentesque erat eget vitae, porta aenean justo interdum proident ut. In
+                                            tristique, pellentesque turpis aliquam sit vel...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic3.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block col-md-8">
+                                        <p class="title">Viverra sollicitudin mus consectetuer</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Odio felis velit velit, pellentesque felis, maecenas numquam sed in nunc,
+                                            felis pellentesque curabitur turpis quis, interdum massa. Vestibulum non,
+                                            sit fermentum dolor vehicula pellentesque...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic4.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Lectus tempor lectus volutpat lacus id, eros pellentesque</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Eu at ac mauris felis non hendrerit, scelerisque viverra id faucibus dolor,
+                                            sodales augue vestibulum massa ligula aliquet odio, nam sed leo donec at.
+                                            Curabitur euismod in ullamcorper, netus luctus nonummy fringilla ut integer
+                                            eget...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic5.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Odio felis velit velit</p>
+                                        <p class="date">08.06.2019</p>
+                                        <p class="description">
+                                            Odio felis velit velit, pellentesque felis, maecenas numquam sed in nunc,
+                                            felis pellentesque curabitur turpis quis, interdum massa. Vestibulum non,
+                                            sit fermentum dolor vehicula pellentesque
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic6.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Ut pharetra, pellentesque justo</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Sit sem eu pellentesque quis id suscipit, vel cras, arcu vestibulum id, ac
+                                            pellentesque erat eget vitae, porta aenean justo interdum proident ut. In
+                                            tristique, pellentesque turpis aliquam sit vel...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic7.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">A purus quis praesent facilisis mauris</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Lectus tempor lectus volutpat lacus id, eros pellentesque curabitur, numquam
+                                            risus nec velit. Morbi ligula neque. Eget pede sit fringilla nulla, suscipit
+                                            integer vel aenean ut magna, et leo...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic8.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Consectetuer semper nostra eum molestie, aliquam gravida
+                                            volutpat mauris eros in conubia</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Sit sem eu pellentesque quis id suscipit, vel cras, arcu vestibulum id, ac
+                                            pellentesque erat eget vitae, porta aenean justo interdum proident ut. In
+                                            tristique, pellentesque turpis aliquam sit vel...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog__row-post">
+                        <a href="#">
+                            <div class="row">
+                                <div class="col-lg-3 offset-lg-1 col-md-4">
+                                    <div class="blog__pic-block">
+                                        <img src="images/blogpic9.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <div class="blog__text-block">
+                                        <p class="title">Nullam felis amet tortor sed</p>
+                                        <p class="date">03.07.2019</p>
+                                        <p class="description">
+                                            Nullam lectus in nisl varius at, ut lorem accusamus ultrices dictum eget
+                                            nulla, vivamus lacus lobortis vivamus vestibulum consectetuer magna, ut enim
+                                            volutpat parturient duis dolor. Libero in id nonummy, blandit vel
+                                            inventore...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="blog__more-post">
+                                    <span><img src="images/icons/spinner-of-dots.svg" alt="spinner"> Завантажити
+                                        більше</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-8">
+                        <form action="" id="subscribe-form">
+                            <input type="text" class="subscribe-form__input" placeholder="Ваш email">
+                            <input type="submit" class="subscribe-form__btn" value="Підписатися на оновлення">
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-4">
+                        <div class="subscribe__social">
+                            <ul>
+                                <li><a href="#" target="_blank"></a></li>
+                                <li><a href="#" target="_blank"></a></li>
+                                <li><a href="#" target="_blank"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__service-center">
+                        <p class="footer__title">Центр обслуговування</p>
+                        <ul>
+                            <li><a href="mailto:info@akvarodos.com">info@akvarodos.com</a></li>
+                            <li>02222, г. Киев, ул. Пуховская 2б</li>
+                            <li><a href="tel:+380683840770">+38 /068/ 384 07 70</a></li>
+                            <li><a href="tel:+380503810770">+38 /050/ 381 07 70</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3">
+                    <div class="footer__production">
+                        <p class="footer__title">Продукція</p>
+                        <ul>
+                            <li><a href="#">Меблі для ванни</a></li>
+                            <li><a href="#">Кераміка</a></li>
+                            <li><a href="#">Аксесуари</a></li>
+                            <li><a href="#">Все для душа</a></li>
+                            <li><a href="#">Змішувачі</a></li>
+                            <li><a href="#">Меблі для дому</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="footer__info">
+                        <p class="footer__title">Інформація</p>
+                        <ul>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Контакти</a></li>
+                            <li><a href="#">Магазин</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-right">
+                        <div class="footer__logo">
+                            <a href="index.html"><img src="images/logo-footer.svg" alt="logo"></a>
+                        </div>
+                        <p>
+                            Компанія АКВА РОДОС є лідером в Україні з виробництва еклюзивних і серійних меблів. Протягом
+                            15 років ми створюємо бренд, який асоціюється з високою якістю і бездоганним дизайном.
+                        </p>
+                        <ul class="footer__language">
+                            <li class="active"><a href="#">Ua</a></li>
+                            <li><a href="#">Ru</a></li>
+                            <li><a href="#">En</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-5">
+                        <ul>
+                            <li><a href="#" target="_blank"></a></li>
+                            <li><a href="#" target="_blank"></a></li>
+                            <li><a href="#" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-7">
+                        <p>© Аква Родос, 2019, всі права захищено</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/video.js"></script>
+</body>
+
+</html>
