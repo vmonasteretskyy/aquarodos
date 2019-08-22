@@ -93,5 +93,26 @@ $(document).ready(function () {
         ]
     });
 
-
 });
+
+function initMap() {
+    var markercenter = { lat: 48.6886259, lng: 30.63521 };
+    var marker1 = { lat: 49.7965556, lng: 30.1222457 };
+    var marker2 = { lat: 46.4635555, lng: 36.6733557 };
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 6,
+        center: markercenter
+    });
+
+
+    var marker = new google.maps.Marker({
+        position: marker1,
+        map: map
+    });
+    var marker = new google.maps.Marker({
+        position: marker2,
+        map: map
+    });
+}

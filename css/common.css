@@ -548,6 +548,15 @@ header {
     height: 61px;
     vertical-align: middle;
     border: none;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.subscribe-form__btn:hover {
+    background-color: #132642;
 }
 
 .subscribe__social {
@@ -579,6 +588,11 @@ header {
     height: 22px;
     background-repeat: no-repeat;
     background-position: center center;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
 
 .subscribe__social ul li:first-child a {
@@ -591,6 +605,14 @@ header {
 
 .subscribe__social ul li:nth-child(3) a {
     background-image: url(../images/icons/youtube-play-button.svg);
+}
+
+.subscribe__social ul li a:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 /* footer */
@@ -789,6 +811,11 @@ footer {
     display: none;
 }
 
+.header-nav ul li.active a:before {
+    width: 60px;
+    max-width: 100%;
+}
+
 .header-nav ul li a:before {
     content: "";
     width: 0;
@@ -808,7 +835,7 @@ footer {
 }
 
 .header-nav ul li a:hover:before {
-
+    max-width: 100%;
     left: 0;
     right: 0;
     width: 60px;
@@ -1072,6 +1099,10 @@ footer {
     font-size: 13px;
     line-height: 17px;
     color: #626161;
+}
+
+.bread-crums ul li a:hover {
+    text-decoration: underline;
 }
 
 .bread-crums ul li:after {
@@ -1695,6 +1726,22 @@ h1,
     margin-right: 28px;
 }
 
+.subscribe-us ul li a img {
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.subscribe-us ul li a:hover img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 .subscribe-us ul li:last-child {
     margin-right: 0;
 }
@@ -1766,6 +1813,11 @@ textarea.contact-form__input {
     color: #FFFFFF;
     outline: none;
     cursor: pointer;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
 
 .contact-form__submit:hover {
@@ -2326,6 +2378,11 @@ textarea.contact-form__input {
     color: #fff;
     margin-top: 60px;
     display: inline-block;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
 
 .offer-btn span:after {
@@ -2634,4 +2691,11 @@ textarea.contact-form__input {
 
 .map-page {
     padding-bottom: 85px;
+}
+
+/* map */
+#map {
+    width: 100%;
+    height: 624px;
+    background-color: #cecece;
 }

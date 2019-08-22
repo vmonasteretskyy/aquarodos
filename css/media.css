@@ -25,6 +25,9 @@
 }
 
 @media(max-width:1550.8px) {
+    .main-slider+.advantages {
+        padding-top: 30px;
+    }
 
     .header-nav ul li a {
         font-size: 17px;
@@ -786,7 +789,8 @@
         padding-bottom: 50px;
     }
 
-    .work-open {
+    .work-open,
+    .map-page {
         padding-bottom: 50px;
     }
 
@@ -993,10 +997,9 @@
         margin-top: 20px;
     }
 
-
-
-
-
+    .map__choose-country {
+        height: 50px;
+    }
 
     /* fonts */
     .blog__bigpost-text .descr,
@@ -1144,6 +1147,26 @@
     .hr-manager {
         padding: 20px 30px 25px 30px;
     }
+
+    .map__map-box {
+        height: 450px;
+    }
+
+    .map-row .right-info {
+        display: block;
+    }
+
+    .map-row .right-info>* {
+        display: block;
+    }
+
+    .map-row .adress,
+    .map-row .right-info a,
+    .map-row .right-info span {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
 
 
 
@@ -1452,6 +1475,21 @@
     .loading__centerblock {
         text-align: center;
     }
+
+    .map-page .button_blue {
+        bottom: 0;
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .map__choose-country select {
+        width: 100%;
+        border-right: none;
+    }
+
+
+
 
     /* fonts */
     .catinfo.product .catinfo__title,
