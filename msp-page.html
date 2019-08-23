@@ -121,7 +121,9 @@
                                     <a href="mailto:eurodim-mebitar@ukr.net">eurodim-mebitar@ukr.net</a>
                                     <span>Пн-Нд: 09:00-18:00
                                     </span>
-                                    <a href="#" class="marker"><img src="images/icons/map-marker-blue.svg" alt="marker">
+                                    <a href="#" class="marker maploc" data-marker=""
+                                        data-title="Біла церква, вул. Гоголя 19А, Мебітар"><img
+                                            src="images/icons/map-marker-blue.svg" alt="marker">
                                         Показати на
                                         карті</a>
                                 </div>
@@ -572,6 +574,8 @@
                 // If is same category or category not picked
                 if (marker.category == category || category.length === 0) {
                     marker.setVisible(true);
+                    map.setZoom(15);
+                    map.setCenter(gmarkers1[i].getPosition());
                 }
                 // Categories don't match 
                 else {
