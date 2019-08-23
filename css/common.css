@@ -2625,7 +2625,7 @@ textarea.contact-form__input {
 .map__choose-country select option {
     color: #717171;
     opacity: 0.55;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 140%;
 }
 
@@ -2693,9 +2693,26 @@ textarea.contact-form__input {
     padding-bottom: 85px;
 }
 
+header {
+    z-index: 9;
+}
+
 /* map */
-#map {
+#map-canvas {
     width: 100%;
     height: 624px;
     background-color: #cecece;
+}
+
+.gm-style .gm-style-iw-c {
+    box-shadow: 0 2px 7px 1px rgb(6, 53, 122);
+    /* border: 1px solid #06357a; */
+}
+
+.gm-style .gm-style-iw-t::after {
+    box-shadow: -2px 2px 2px 0 rgb(6, 53, 122, 0.6);
+}
+
+.gm-style .gm-style-iw-d {
+    font-size: 14px;
 }

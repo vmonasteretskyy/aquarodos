@@ -95,24 +95,47 @@ $(document).ready(function () {
 
 });
 
-function initMap() {
-    var markercenter = { lat: 48.6886259, lng: 30.63521 };
-    var marker1 = { lat: 49.7965556, lng: 30.1222457 };
-    var marker2 = { lat: 46.4635555, lng: 36.6733557 };
 
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 6,
-        center: markercenter
-    });
+
+// var markers = [];
+// var map;
 
 
-    var marker = new google.maps.Marker({
-        position: marker1,
-        map: map
-    });
-    var marker = new google.maps.Marker({
-        position: marker2,
-        map: map
-    });
-}
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 6,
+//         center: { lat: 48.6886259, lng: 30.63521 },
+
+//     });
+
+//     // array locations
+//     var locations = [
+//         ["Біла церква", "вул. Гоголя 19А, Мебітар", 49.7965556, 30.1222457],
+//         ["Бердянськ", "вул. Свободи 53,Салон Merx", 46.4635555, 36.6733557],
+//         ["Вінниця", "вул. Липовецька, 6А, ТЦ Віват", 49.2499794, 28.5065124],
+//         ["Вінниця", "вул. Келецька 117Б, ТЦ Plaza Park", 49.2270624, 28.3937443],
+//         ["Вишгород", "вул. Кургузова 11А", 50.5845714, 30.4798093],
+//         ["Гостомель", "вул. Кулішова Д, 26, ТЦ Варшавка", 50.5520044, 30.2940174],
+//         ["Дніпро", "вул. Стартова 9А, ТЦ Нова лінія", 48.3983855, 35.0424133],
+//         ["Дніпро", "вул. Нижньодніпровська 17, ТЦ Караван", 48.5294122, 35.0285771],
+//         ["Дніпро", "вул. Космічна 53А, ТЦ Biennale", 48.4071836, 35.0308192],
+//         ["Дрогобич", "вул. Пилипа орлика 15/3", 49.3591627, 23.5108853],
+//         ["Житомир", "вул. Вітрука 9Б, ТЦ Rolf", 50.2616728, 28.6915329],
+//         ["Запоріжжя", "вул. Гагаріна 3, ТЦ Імперія меблів 2 поверх", 47.8369516, 35.1434516],
+//         ["Івано-Франківськ", "вул. Мазепи 168А, ТЦ Сільпо, 4 поверх", 48.9077335, 24.6803446],
+//     ];
+//     locations.forEach(function (element) {
+//         var marker = new google.maps.Marker({
+//             position: element.position,
+//             map: map,
+//             title: element.title,
+//             icon: element.icon,
+//             draggable: true,
+//             animation: google.maps.Animation.DROP,
+
+//         });
+//     });
+// }
+
+

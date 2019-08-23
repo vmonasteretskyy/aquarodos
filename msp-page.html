@@ -89,9 +89,22 @@
                         <option value="1">Країна 2</option>
                         <option value="2">Країна 3</option>
                     </select>
+                    <select id="type" onchange="filterMarkers(this.value);">
+                        <option value="">Виберіть місто</option>
+                        <option value="bila-cerkva">Біла церква</option>
+                        <option value="berdiansk">Бердянськ</option>
+                        <option value="vinnycia">Вінниця</option>
+                        <option value="vyshgorod">Вишгород</option>
+                        <option value="gostomel">Гостомель</option>
+                        <option value="dnipro">Дніпро</option>
+                        <option value="drogobych">Дрогобич</option>
+                        <option value="zhytomyr">Житомир</option>
+                        <option value="zaporizhia">Запоріжжя</option>
+                        <option value="ivano-frankivsk">Івано-Франківськ</option>
+                    </select>
                 </div>
             </div>
-            <div id="map"></div>
+            <div id="map-canvas"></div>
 
             <div class="container">
                 <div class="map-rows">
@@ -459,14 +472,126 @@
 
     <script src="js/jquery.min.js"></script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTko-sbRWz0bauxHHH0J2o_HnOfSenow&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC99QD07h8u-T1_ExokEet5_2ApxxXu8ck&callback"
         type="text/javascript"></script>
     <script src="js/common.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
-
     <script src="js/video.js"></script>
 
+    <script>
+        var gmarkers1 = [];
+        var markers1 = [];
+        var infowindow = new google.maps.InfoWindow({
+            content: ''
+        });
+
+        // Our markers
+        markers1 = [
+            ['0', 'Біла церква, вул. Гоголя 19А, Мебітар', 49.7968044, 30.1205233, 'bila-cerkva'],
+            ['1', 'Бердянськ, вул. Свободи 53, Салон Merx', 46.75935, 36.7840544, 'berdiansk'],
+            ['2', 'Вінниця, вул. Липовецька, 6А, ТЦ Віват', 49.2499794, 28.5065124, 'vinnycia'],
+            ['3', 'Вінниця, вул. Келецька 117Б, ТЦ Plaza Park', 49.2270624, 28.3937443, 'vinnycia'],
+            ['4', 'Вишгород, вул. Кургузова 11А', 50.5845714, 30.4798093, 'vyshgorod'],
+            ['5', 'Гостомель, вул. Кулішова Д, 26, ТЦ Варшавка', 50.5537294, 30.2912553, 'gostomel'],
+            ['6', 'Дніпро, вул. Стартова 9А, ТЦ Нова лінія', 48.3983855, 35.0424133, 'dnipro'],
+            ['7', 'Дніпро, вул. Нижньодніпровська 17, ТЦ Караван', 48.5294122, 35.0285771, 'dnipro'],
+            ['8', 'Дніпро, вул. Космічна 53А, ТЦ Biennale', 48.4071836, 35.0308192, 'dnipro'],
+            ['9', 'Дрогобич, вул. Пилипа орлика 15/3', 49.3591627, 23.5108853, 'drogobych'],
+            ['10', 'Житомир, вул. Вітрука 9Б, ТЦ Rolf', 50.2563663, 28.7038255, 'zhytomyr'],
+            ['11', 'Запоріжжя, вул. Гагаріна 3, ТЦ Імперія меблів 2 поверх', 47.8369516, 35.1434516, 'zaporizhia'],
+            ['12', 'Івано-Франківськ, вул. Мазепи 168А, ТЦ Сільпо, 4 поверх', 48.9077335, 24.6803446, 'ivano-frankivsk']
+        ];
+
+        /**
+         * Function to init map
+         */
+
+        function initialize() {
+            var center = new google.maps.LatLng(48.6886259, 30.63521);
+            var mapOptions = {
+                zoom: 6,
+                center: center,
+                styles: [
+
+                ]
+            };
+
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            for (i = 0; i < markers1.length; i++) {
+                addMarker(markers1[i]);
+            }
+
+
+        }
+
+        /**
+         * Function to add marker to map
+         */
+
+        function addMarker(marker) {
+            var category = marker[4];
+            var title = marker[1];
+            var pos = new google.maps.LatLng(marker[2], marker[3]);
+            var content = marker[1];
+
+            marker1 = new google.maps.Marker({
+                title: title,
+                position: pos,
+                category: category,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: {
+                    url: "images/icons/location.svg",
+                    scaledSize: new google.maps.Size(35, 35)
+                },
+            });
+
+            gmarkers1.push(marker1);
+
+            // Marker click listener
+            google.maps.event.addListener(marker1, 'click', (function (marker1, content) {
+                return function () {
+                    console.log('Gmarker 1 gets pushed');
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker1);
+                    map.panTo(this.getPosition());
+                    map.setZoom(15);
+
+                }
+            })(marker1, content));
+        }
+
+        /**
+         * Function to filter markers by category
+         */
+
+        filterMarkers = function (category) {
+            for (i = 0; i < gmarkers1.length; i++) {
+                marker = gmarkers1[i];
+                // If is same category or category not picked
+                if (marker.category == category || category.length === 0) {
+                    marker.setVisible(true);
+                }
+                // Categories don't match 
+                else {
+                    marker.setVisible(false);
+                }
+            }
+        }
+
+
+        // Init map
+        initialize();
+
+
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
