@@ -574,12 +574,13 @@
                 // If is same category or category not picked
                 if (marker.category == category || category.length === 0) {
                     marker.setVisible(true);
-                    map.setZoom(15);
+                    map.setZoom(10);
                     map.setCenter(gmarkers1[i].getPosition());
                 }
                 // Categories don't match 
                 else {
                     marker.setVisible(false);
+                    // map.setZoom(6);
                 }
             }
         }
