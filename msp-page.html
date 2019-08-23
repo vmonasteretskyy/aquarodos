@@ -143,7 +143,9 @@
                                     <a href="mailto:eurodim-mebitar@ukr.net">ok5550@gmail.com</a>
                                     <span>Пн-Нд: 09:00-18:00
                                     </span>
-                                    <a href="#" class="marker"><img src="images/icons/map-marker-blue.svg" alt="marker">
+                                    <a href="#" class="marker maploc" data-marker=""
+                                        data-title="Бердянськ, вул. Свободи 53, Салон Merx"><img
+                                            src="images/icons/map-marker-blue.svg" alt="marker">
                                         Показати на
                                         карті</a>
                                 </div>
@@ -580,9 +582,9 @@
                 // Categories don't match 
                 else {
                     marker.setVisible(false);
-                    // map.setZoom(6);
                 }
             }
+
         }
 
 
@@ -595,6 +597,31 @@
 
 
 
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var k = 0;
+            locations.forEach(function (i, item) {
+                $('.withpad').find('.maploc[data-title="' + i[0].replace(/&quot;/g, '\"') + '"]').attr('data-marker', k);
+                k++;
+            })
+
+            $('.maploc').click(function () {
+                var markerId = parseInt($(this).data('marker'));
+                google.maps.event.trigger(marker[markerId], 'click');
+            })
+
+            $('.shopSlider1').each(function () {
+                $(this).magnificPopup({
+                    type: 'image',
+                    delegate: 'a',
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            })
+        });
 
     </script>
 </body>
