@@ -54,6 +54,7 @@ function addMarker(marker) {
     var pos = new google.maps.LatLng(marker[2], marker[3]);
     var content = marker[1];
 
+
     marker1 = new google.maps.Marker({
         title: title,
         position: pos,
@@ -64,7 +65,12 @@ function addMarker(marker) {
             url: "images/icons/location.svg",
             scaledSize: new google.maps.Size(35, 35)
         },
+
     });
+
+    if (marker1.category == 'all') {
+        marker1.icon.url = '';
+    }
 
 
     gmarkers1.push(marker1);
@@ -99,16 +105,18 @@ filterMarkers = function (category) {
             map.setCenter(gmarkers1[i].getPosition());
             if (category == 'all') {
                 map.setZoom(6);
+                marker.setVisible(false);
+
             }
         }
 
         // Categories don't match
         else {
         }
+
     }
 
 }
-
 
 initialize();
 
