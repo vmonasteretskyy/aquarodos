@@ -2720,3 +2720,33 @@ header {
 html {
     scroll-behavior: smooth;
 }
+
+/* .... */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap');
+
+.slider-news__textblock .descr {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-right p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+/* map fix */
+.ru-row,
+.kaz-row {
+    display: none;
+}
+
+.ru-opt,
+.kaz-opt {
+    display: none;
+}
+
+#map-canvas2 {
+    width: 100%;
+    height: 624px;
+    background-color: #cecece;
+}

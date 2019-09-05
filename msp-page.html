@@ -84,31 +84,34 @@
                     </div>
                 </div>
                 <div class="map__choose-country">
-                    <!-- <select name="" id="">
+                    <select name="" id="country_id">
                         <option value="0">Україна</option>
-                        <option value="1">Країна 2</option>
-                        <option value="2">Країна 3</option>
-                    </select> -->
+                        <option value="1">Росія</option>
+                        <option value="2">Казахстан</option>
+                    </select>
                     <select id="type" onchange="filterMarkers(this.value);">
                         <option value="all">Виберіть місто</option>
-                        <option value="bila-cerkva">Біла церква</option>
-                        <option value="berdiansk">Бердянськ</option>
-                        <option value="vinnycia">Вінниця</option>
-                        <option value="vyshgorod">Вишгород</option>
-                        <option value="gostomel">Гостомель</option>
-                        <option value="dnipro">Дніпро</option>
-                        <option value="drogobych">Дрогобич</option>
-                        <option value="zhytomyr">Житомир</option>
-                        <option value="zaporizhia">Запоріжжя</option>
-                        <option value="ivano-frankivsk">Івано-Франківськ</option>
+                        <option class="ua-opt" value="bila-cerkva">Біла церква</option>
+                        <option class="ua-opt" value="berdiansk">Бердянськ</option>
+                        <option class="ua-opt" value="vinnycia">Вінниця</option>
+                        <option class="ua-opt" value="vyshgorod">Вишгород</option>
+                        <option class="ua-opt" value="gostomel">Гостомель</option>
+                        <option class="ua-opt" value="dnipro">Дніпро</option>
+                        <option class="ua-opt" value="drogobych">Дрогобич</option>
+                        <option class="ua-opt" value="zhytomyr">Житомир</option>
+                        <option class="ua-opt" value="zaporizhia">Запоріжжя</option>
+                        <option class="ua-opt" value="ivano-frankivsk">Івано-Франківськ</option>
+                        <option class="ru-opt" value="moskva">Москва</option>
+                        <option class="kaz-opt" value="astana">Астана</option>
                     </select>
                 </div>
             </div>
+
             <div id="map-canvas"></div>
 
             <div class="container">
                 <div class="map-rows">
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Біла церква</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -129,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Бердянськ</p>
                         <p class="descr">Фірмовий салон “Аквародос”</p>
                         <div class="row">
@@ -150,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Вінниця</p>
                         <p class="descr">Фірмовий салон “Аквародос”</p>
                         <div class="row">
@@ -171,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Вінниця</p>
                         <p class="descr">Фірмовий салон “Аквародос”</p>
                         <div class="row">
@@ -192,7 +195,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Вишгород</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -213,7 +216,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Гостомель</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -234,7 +237,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Дніпро</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -255,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Дніпро</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -276,7 +279,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Дніпро</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -297,7 +300,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Дрогобич</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -318,7 +321,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Житомир</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -339,7 +342,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Запоріжжя</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -360,7 +363,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-row">
+                    <div class="map-row ua-row">
                         <p class="title">Івано-Франківськ</p>
                         <p class="descr">Магазин партнер “Аквародос”</p>
                         <div class="row">
@@ -374,6 +377,48 @@
                                     <span>Пн-Нд: 09:00-18:00
                                     </span>
                                     <a href="#" class="marker maploc" data-marker="13"><img
+                                            src="images/icons/map-marker-blue.svg" alt="marker">
+                                        Показати на
+                                        карті</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-row ru-row">
+                        <p class="title">Москва</p>
+                        <p class="descr">Магазин партнер “Аквародос”</p>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <p class="adress">вул. Мазепи 168А, ТЦ “Сільпо”, 4 поверх</p>
+                            </div>
+                            <div class="col-xl-8">
+                                <div class="right-info">
+                                    <a href="tel:+380978002012">+38 (097) 800-20-12</a>
+                                    <a href="mailto:derkach_yulia@ukr.net">derkach_yulia@ukr.net</a>
+                                    <span>Пн-Нд: 09:00-18:00
+                                    </span>
+                                    <a href="#" class="marker maploc" data-marker="14"><img
+                                            src="images/icons/map-marker-blue.svg" alt="marker">
+                                        Показати на
+                                        карті</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-row kaz-row">
+                        <p class="title">Астана</p>
+                        <p class="descr">Магазин партнер “Аквародос”</p>
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <p class="adress">вул. Мазепи 168А, ТЦ “Сільпо”, 4 поверх</p>
+                            </div>
+                            <div class="col-xl-8">
+                                <div class="right-info">
+                                    <a href="tel:+380978002012">+38 (097) 800-20-12</a>
+                                    <a href="mailto:derkach_yulia@ukr.net">derkach_yulia@ukr.net</a>
+                                    <span>Пн-Нд: 09:00-18:00
+                                    </span>
+                                    <a href="#" class="marker maploc" data-marker="15"><img
                                             src="images/icons/map-marker-blue.svg" alt="marker">
                                         Показати на
                                         карті</a>

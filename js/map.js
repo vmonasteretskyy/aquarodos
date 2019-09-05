@@ -19,8 +19,12 @@ markers1 = [
     ['10', 'Дрогобич, вул. Пилипа орлика 15/3', 49.3591627, 23.5108853, 'drogobych'],
     ['11', 'Житомир, вул. Вітрука 9Б, ТЦ Rolf', 50.2563663, 28.7038255, 'zhytomyr'],
     ['12', 'Запоріжжя, вул. Гагаріна 3, ТЦ Імперія меблів 2 поверх', 47.8369516, 35.1434516, 'zaporizhia'],
-    ['13', 'Івано-Франківськ, вул. Мазепи 168А, ТЦ Сільпо, 4 поверх', 48.9077335, 24.6803446, 'ivano-frankivsk']
+    ['13', 'Івано-Франківськ, вул. Мазепи 168А, ТЦ Сільпо, 4 поверх', 48.9077335, 24.6803446, 'ivano-frankivsk'],
+    ['14', 'Москва', 55.7563652, 37.5805184, 'moskva'],
+    ['15', 'Астана', 51.1275208, 71.4509949, 'astana'],
 ];
+
+
 
 /**
  * Function to init map
@@ -75,6 +79,9 @@ function addMarker(marker) {
 
     gmarkers1.push(marker1);
 
+
+
+
     // Marker click listener
     google.maps.event.addListener(marker1, 'click', (function (marker1, content) {
         return function () {
@@ -89,21 +96,92 @@ function addMarker(marker) {
 
 
 
+
 }
 
 /**
 * Function to filter markers by category
 */
 
+function newLocation(newLat, newLng) {
+    map.setCenter({
+        lat: newLat,
+        lng: newLng,
+    });
+    map.setZoom(5.5);
+}
+
+
+$('.map__choose-country select:first-child').change(function () {
+    if ($('.map__choose-country option:selected').val() == 0) {
+        newLocation(48.6886259, 30.63521);
+        $('#type').val('0');
+        $('.ru-row').hide();
+        $('.ua-row').show();
+        $('.kaz-row').hide();
+        $('.ru-opt, .kaz-opt').hide();
+        $('.ua-opt').show();
+    }
+    if ($('.map__choose-country option:selected').val() == 1) {
+        $('#type').val('0');
+        newLocation(55.7853731, 43.1791836);
+        $('.ru-row').show();
+        $('.ua-row').hide();
+        $('.kaz-row').hide();
+        $('.ua-opt, .kaz-opt').hide();
+        $('.ru-opt').show();
+
+    }
+    if ($('.map__choose-country option:selected').val() == 2) {
+        $('#type').val('0');
+        newLocation(48.2685805, 68.0861596);
+        $('.ru-row').hide();
+        $('.ua-row').hide();
+        $('.kaz-row').show();
+        $('.ru-opt, .ua-opt').hide();
+        $('.kaz-opt').show();
+    }
+});
+
+function getCountrySelect() {
+    var country = $('#country_id').val();
+
+    var result = '';
+
+    switch (country) {
+        case '0':
+            result = { lat: 48.6886259, lng: 30.63521 };
+            break;
+        case '1':
+            result = { lat: 55.7853731, lng: 43.1791836 };
+            break;
+        case '2':
+            result = { lat: 48.2685805, lng: 68.0861596 };
+            break;
+        default:
+            result = { lat: 48.6886259, lng: 30.63521 };
+            break;
+
+    }
+    return result;
+}
+
+
 filterMarkers = function (category) {
+
     for (i = 0; i < gmarkers1.length; i++) {
         marker = gmarkers1[i];
         // If is same category or category not picked
         if (marker.category == category || category.length === 0) {
+
             marker.setVisible(true);
             map.setZoom(10);
+            console.log(map);
+
             map.setCenter(gmarkers1[i].getPosition());
+
             if (category == 'all') {
+                map.setCenter(getCountrySelect());
                 map.setZoom(6);
                 marker.setVisible(false);
 
@@ -129,3 +207,4 @@ $('.maploc').click(function () {
 
 
 })
+
